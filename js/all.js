@@ -1466,7 +1466,7 @@ var currentPage = 0;
 var DistrictChoose = null;
 var PageForm = [];
 var District = [];
-updateList();
+// updateList();
 // var DistrictPage = new Array();
 var LingYa = document.querySelector(".block1");
 
@@ -1617,15 +1617,11 @@ function updateList(){
           District.push(data[i]);
         }
      }
+       pageData(District);
 
-     if (District.length == 0) {
-       pageData(data);
-     }else{
-        pageData(District);
-     }
      console.log(PageForm);
-
-     for (let j = 0; j < PageForm[currentPage].length ; j++) {
+     if(PageForm.length != 0){
+      for (let j = 0; j < PageForm[currentPage].length ; j++) {
   
         str += "<div class='DistrictInfo'>"+
         "<div class='bkImg' style='background-image: url("+PageForm[currentPage][j].Picture1+")'><span class='name'>"+PageForm[currentPage][j].Name+"</span>"+
@@ -1640,6 +1636,8 @@ function updateList(){
         "</div>"+
         "</div>" ;
     }
+     }
+    
       
       console.log(District);  
       District = [];
