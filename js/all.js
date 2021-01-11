@@ -1689,7 +1689,7 @@ function updateList(){
     }
     strPages += "<a class='page' href='#'>&gt;</a>";
 
-    // console.log(str);
+    
     document.querySelector("#pages").innerHTML = strPages ;
   }
-  // console.log((data[0].Add.substring(3,6)));
+  
