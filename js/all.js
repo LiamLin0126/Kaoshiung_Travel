@@ -1582,15 +1582,15 @@ function PageSelect(e){
    for (let j = 0; j < PageForm[pageNumber].length; j++) {
   
     str += "<div class='DistrictInfo'>"+
-        "<div class='bkImg' style='background-image: url("+PageForm[0][j].Picture1+")'><span class='name'>"+PageForm[0][j].Name+"</span>"+
-        "<span class='zone'>"+PageForm[0][j].Zone+"</span></div>"+
+        "<div class='bkImg' style='background-image: url("+PageForm[pageNumber][j].Picture1+")'><span class='name'>"+PageForm[0][j].Name+"</span>"+
+        "<span class='zone'>"+PageForm[pageNumber][j].Zone+"</span></div>"+
         "<div class='datainfo'>"
         +"<div class='opentimeicon'><img src='images/icons_clock.png'>"
-        +"<span>"+PageForm[0][j].Opentime+"</span></br></div>"
+        +"<span>"+PageForm[pageNumber][j].Opentime+"</span></br></div>"
         +"<div class='addricon'><img src='images/icons_pin.png'>"
-        +"<span>"+PageForm[0][j].Add+"</span></br></div>"
+        +"<span>"+PageForm[pageNumber][j].Add+"</span></br></div>"
         +"<div class='phoneicon'><img  src='images/icons_phone.png'>"
-        +"<span>"+PageForm[0][j].Tel+"<span id='tag'><img src='images/icons_tag.png'>"+PageForm[0][j].Ticketinfo+"</span></span></div>"+
+        +"<span>"+PageForm[pageNumber][j].Tel+"<span id='tag'><img src='images/icons_tag.png'>"+PageForm[0][j].Ticketinfo+"</span></span></div>"+
         "</div>"+
         "</div>" ;
 }
@@ -1619,7 +1619,8 @@ function updateList(){
      }
        pageData(District);
 
-     console.log(PageForm);
+     console.log(PageForm.length);
+     console.log(PageForm[currentPage]);
      if(PageForm.length != 0){
       for (let j = 0; j < PageForm[currentPage].length ; j++) {
   
@@ -1642,7 +1643,7 @@ function updateList(){
       console.log(District);  
       District = [];
       // PageForm = [];
-      console.log(PageForm);
+      console.lßog(PageForm);
       document.querySelector(".form").innerHTML = str ;
   }
   
