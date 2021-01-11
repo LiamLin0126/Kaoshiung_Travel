@@ -1577,7 +1577,7 @@ function PageSelect(e){
       var pageNumber = e.target.innerHTML -1 ;
     }
 
-    console.log(pageNumber);
+   
    var str = "" ;
    for (let j = 0; j < PageForm[pageNumber].length; j++) {
   
