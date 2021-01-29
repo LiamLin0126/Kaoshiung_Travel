@@ -1493,6 +1493,7 @@ var Xinxing = document.querySelector(".block3");
 
 Xinxing.addEventListener("click",XinxingShow, true);
 
+//新興區
 function XinxingShow(){
   PageForm= [];
   document.getElementById("DistrictName").innerText = "新興區" ;
