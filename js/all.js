@@ -1644,7 +1644,7 @@ function updateList(){
       console.log(District);  
       District = [];
       // PageForm = [];
-      console.lßog(PageForm);
+      console.log(PageForm);
       document.querySelector(".form").innerHTML = str ;
   }
   
