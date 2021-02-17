@@ -1470,6 +1470,21 @@ var District = [];
 // var DistrictPage = new Array();
 var LingYa = document.querySelector(".block1");
 
+var strDistrict = "<option>--請選擇行政區--</option>";
+
+var result = new Set();
+var repeat = new Set();
+
+data.forEach(item => {
+  result.has(item.Zone) ? repeat.add(item.Zone) : result.add(item.Zone);
+})
+
+result.forEach(item => {
+  strDistrict += "<option value="+item+">"+item+"</option>"
+})
+
+document.querySelector(".District").innerHTML = strDistrict;
+
 LingYa.addEventListener("click",LingyaShow, true);
 
 function LingyaShow(){
